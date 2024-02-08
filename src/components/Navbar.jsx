@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from '../assets/logog.svg'
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState(null);
 
@@ -11,11 +11,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white border-gray-200 shadow-sm">
+      <nav className="sticky top-0 bg-white border-gray-200 shadow-sm">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to="/" className={`flex items-center space-x-3 rtl:space-x-reverse ${activeLink === 'h' ? '' : ''}`}                 onClick={() => toggleBtn('h')}
->
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">#VANLIFE</span>
+          <Link
+            to="/"
+            className={`flex items-center space-x-3 rtl:space-x-reverse ${
+              activeLink === "h" ? "" : ""
+            }`}
+            onClick={() => toggleBtn("h")}
+          >
+            <img src={Logo} alt="" srcset="" className="w-44" />
+        
           </Link>
           <button
             data-collapse-toggle="navbar-default"
@@ -25,8 +31,20 @@ const Navbar = () => {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -34,9 +52,11 @@ const Navbar = () => {
               <li>
                 <Link
                   to="#"
-                  className={`block py-2 px-3 rounded md:p-0 ${activeLink === 'host' ? 'underline' : ''}`}
+                  className={`block py-2 px-3 rounded md:p-0 ${
+                    activeLink === "host" ? "underline" : ""
+                  }`}
                   aria-current="page"
-                  onClick={() => toggleBtn('host')}
+                  onClick={() => toggleBtn("host")}
                 >
                   Host
                 </Link>
@@ -44,8 +64,10 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/about"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 hover:underline md:p-0 ${activeLink === 'about' ? 'underline' : ''}`}
-                  onClick={() => toggleBtn('about')}
+                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 hover:underline md:p-0 ${
+                    activeLink === "about" ? "underline" : ""
+                  }`}
+                  onClick={() => toggleBtn("about")}
                 >
                   About
                 </Link>
@@ -53,8 +75,10 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/vans"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 hover:underline ${activeLink === 'vans' ? 'underline' : ''}`}
-                  onClick={() => toggleBtn('vans')}
+                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 hover:underline ${
+                    activeLink === "vans" ? "underline" : ""
+                  }`}
+                  onClick={() => toggleBtn("vans")}
                 >
                   Vans
                 </Link>

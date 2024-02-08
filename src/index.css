@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bg-simple{
+    background-color: #E17654;
+}
+.bg-luxury{
+    background-color: #161616;
+}
+.bg-rugged{
+    background-color: #115E59;
+}

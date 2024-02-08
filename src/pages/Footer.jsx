@@ -5,7 +5,7 @@ const Footer = () => {
     <>
     
 
-<footer className="bg-gray-700">
+<footer className="" style={{backgroundColor: '#252525'}}>
     <div className="text-center text-white p-4">
       <span className="text-xl ">© 2023 <a href="https://flowbite.com/" className="hover:underline">#VANLIFE</a>
     </span>
