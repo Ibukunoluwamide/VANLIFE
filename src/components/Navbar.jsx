@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import Logo from '../assets/logog.svg'
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState(null);
-
+  const [openNav, setopenNav] = useState(false)
   const toggleBtn = (link) => {
     // console.log(link);
     setActiveLink(link);
+  };
+  const toggleNav = () => {
+    setopenNav(true);
+    if (openNav==true) {
+      setopenNav(false)
+    }
   };
 
   return (
@@ -20,11 +26,12 @@ const Navbar = () => {
             }`}
             onClick={() => toggleBtn("h")}
           >
-            <img src={Logo} alt="" srcset="" className="w-44" />
+            <img src={Logo} alt="" srcSet="" className="w-44" />
         
           </Link>
           <button
             data-collapse-toggle="navbar-default"
+            onClick={toggleNav}
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
             aria-controls="navbar-default"
@@ -47,11 +54,11 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          <div className={`${openNav?'block':'hidden'} w-full md:block md:w-auto`} id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white ">
               <li>
                 <Link
-                  to="#"
+                  to="/host"
                   className={`block py-2 px-3 rounded md:p-0 ${
                     activeLink === "host" ? "underline" : ""
                   }`}
