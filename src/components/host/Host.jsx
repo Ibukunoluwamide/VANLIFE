@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 const Host = () => {
-  const [activeLink, setActiveLink] = useState(null);
+  const [activeLink, setActiveLink] = useState('dash');
 
   const toggleBtn = (link) => {
     // console.log(link);
@@ -11,7 +11,7 @@ const Host = () => {
   return (
     <>
      
-<ul className="flex flex-wrap items-center justify-center text-gray-900 dark:text-white py-3 sticky bg-white" style={{top: '50px'}}>
+<ul className="flex flex-wrap items-center justify-center text-gray-900 dark:text-white py-3 sticky bg-white shadow" style={{top: '50px'}}>
     <li onClick={()=>toggleBtn('dash')}>
    
         <Link to="/host" className={`${activeLink=='dash'?'underline font-semibold':''} me-4 hover:underline md:me-6`}>Dashboard</Link>
@@ -23,7 +23,7 @@ const Host = () => {
         <Link to="/host/vans" className={`${activeLink=='vans'?'underline font-semibold':''} me-4 hover:underline md:me-6`}>Vans</Link>
     </li>
     <li onClick={()=>toggleBtn('reviews')}>
-        <Link to="#" className={`${activeLink=='reviews'?'underline font-semibold':''} me-4 hover:underline md:me-6`}>Reviews</Link>
+        <Link to="/host/reviews" className={`${activeLink=='reviews'?'underline font-semibold':''} me-4 hover:underline md:me-6`}>Reviews</Link>
     </li>
     
 </ul>

@@ -34,7 +34,7 @@ const Dashboard = () => {
              {
               vans && vans.map((item, index)=>(
 <div key={index}>
-<div className="grid grid-cols-4 px-4 pb-4 gap-3 md:gap-0">
+<div className="grid grid-cols-4 px-4 pb-4 gap-3 md:gap-0 bg-white my-3 p-5">
           <img
             src={item.imageUrl}
             alt=""

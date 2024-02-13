@@ -14,6 +14,8 @@ import Home from "./pages/Home";
 import Income from "./components/host/Income";
 import HostVans from "./components/host/Vans";
 import VanDetails from "./components/host/VanDetails";
+import Reviews from "./components/host/Reviews";
+
 function App() {
   return (
     <>
@@ -28,6 +30,7 @@ function App() {
         <Route path="host" element={<Host />}>
           <Route path="" element={<Dashboard />} />
           <Route path="income" element={<Income />} />
+          <Route path="reviews" element={<Reviews />} />
           <Route path="vans" element={<HostVans />} />
           <Route path="vans/:id" element={<VanDetails />} />
         </Route>

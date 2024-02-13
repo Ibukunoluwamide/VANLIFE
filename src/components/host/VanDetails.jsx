@@ -8,7 +8,7 @@ const VanDetails = () => {
   console.log(id);
   useEffect(() => {
     let filteredVan = vansApi.filter((van) => van.hostId === id);
-    console.log(filteredVan);
+    // console.log(filteredVan);
     setvanInfo(filteredVan[0]);
   }, []);
   return (

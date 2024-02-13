@@ -10,7 +10,7 @@ const HostVans = () => {
               vans && vans.map((item,index)=>(
 
       <div key={index}>
-          <Link to={`/host/vans/${item.hostId}`} className="grid grid-cols-4 px-4 py-4 gap-3 md:gap-0 " >
+          <Link to={`/host/vans/${item.hostId}`} className="grid grid-cols-4 px-4 py-4 gap-3 md:gap-0  bg-white my-3 p-5" >
           <img
             src={item.imageUrl}
             alt=""
