@@ -33,7 +33,7 @@ const VanDetails = () => {
           Back to all vans
         </Link>
         {vanInfo && (
-          <div className=" flex flex-col items-center bg-white  rounded-lg md:flex-row  mb-10 pb-8">
+          <div style={{minHeight: '62vh'}} className=" flex flex-col items-center bg-white  rounded-lg md:flex-row  mb-10 pb-8">
             <img
               className="object-cover h-auto w-auto rounded-t-lg  md:h-96 md:rounded-none md:rounded-s-lg shadow-xl"
               src={vanInfo.imageUrl}

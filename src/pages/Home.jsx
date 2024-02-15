@@ -13,7 +13,7 @@ const Home = () => {
         <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</p>
         <div className="flex justify-center">
           
-            <Link to="#" className="w-80 py-3 px-5  text-base font-medium text-center  rounded-lg" style={{backgroundColor: '#FF8C38'}}>
+            <Link to="/vans" className="w-80 py-3 px-5  text-base font-medium text-center  rounded-lg" style={{backgroundColor: '#FF8C38'}}>
                Find your van
             </Link>  
         </div>

@@ -10,7 +10,8 @@ const Income = () => {
       <p className='text-4xl font-bold py-5'>$2,260</p>
       <img src={incomeChart} alt="" className='w-ful'/>
 
-      <div className="flex justify-between py-3">
+     <div className="">
+     <div className="flex justify-between  py-3">
         <h6 className='font-bold'>Your transactions (3)</h6>
         <h5>Last 30 day</h5>
       </div>
@@ -26,6 +27,7 @@ const Income = () => {
         <h6 className='font-bold'>$980</h6>
         <h5>23/11/22</h5>
       </div>
+     </div>
     </div>
     </section>
     </>
